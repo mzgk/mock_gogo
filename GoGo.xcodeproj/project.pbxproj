@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		32D6FF271F78841000385BAE /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32D6FF261F78841000385BAE /* CoreMotion.framework */; };
 		32DC44FF1F74ADDE005F4A20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DC44FE1F74ADDE005F4A20 /* AppDelegate.swift */; };
 		32DC45011F74ADDE005F4A20 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DC45001F74ADDE005F4A20 /* FirstViewController.swift */; };
 		32DC45031F74ADDE005F4A20 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DC45021F74ADDE005F4A20 /* SecondViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		32D6FF261F78841000385BAE /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		32DC44FB1F74ADDE005F4A20 /* GoGo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32DC44FE1F74ADDE005F4A20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		32DC45001F74ADDE005F4A20 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -31,17 +33,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32D6FF271F78841000385BAE /* CoreMotion.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		32D6FF251F78841000385BAE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				32D6FF261F78841000385BAE /* CoreMotion.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		32DC44F21F74ADDE005F4A20 = {
 			isa = PBXGroup;
 			children = (
 				32DC44FD1F74ADDE005F4A20 /* GoGo */,
 				32DC44FC1F74ADDE005F4A20 /* Products */,
+				32D6FF251F78841000385BAE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -281,11 +293,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4BES6VC9E8;
 				INFOPLIST_FILE = GoGo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mzgkworks.GoGo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -296,11 +309,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4BES6VC9E8;
 				INFOPLIST_FILE = GoGo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mzgkworks.GoGo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
