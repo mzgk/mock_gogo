@@ -40,13 +40,15 @@ class FirstViewController: UIViewController {
             buttonExecute.setTitle("Stop", for: UIControlState())
         }
         else {
-            myPedometor.stopUpdates()
+            stopCounting()
             buttonExecute.setTitle("Start", for: UIControlState())
         }
     }
 
+    // 計測の開始
     func startCounting() {
         if CMPedometer.isPedometerEventTrackingAvailable() {
+            // 活動情報の取得（変化のたびにコールされる）
             myPedometor.startUpdates(from: Date(), withHandler: { (data: CMPedometerData?, error: Error?) in
                 DispatchQueue.main.async {
                     // errorがある場合はリターン
@@ -74,7 +76,18 @@ class FirstViewController: UIViewController {
                     self.labelTime.text = formatter.string(from: time!)
                 }
             })
+
+            // 位置情報の取得を開始
+            LocationService.sharedInstance.startUpdatingLocation()
         }
+        // ## DEBUG ##: マッピングの確認のためにここで計測開始をコール（デバッガだとpedometorが使えないため）
+        LocationService.sharedInstance.startUpdatingLocation()
+    }
+
+    // 計測の停止
+    func stopCounting() {
+        myPedometor.stopUpdates()
+        LocationService.sharedInstance.stopUpdatingLocation()
     }
 
 }

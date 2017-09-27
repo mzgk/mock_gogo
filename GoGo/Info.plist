@@ -27,6 +27,8 @@
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
+		<string>gps</string>
+		<string>location-services</string>
 	</array>
 	<key>UIStatusBarTintParameters</key>
 	<dict>
@@ -51,5 +53,11 @@
 	</array>
 	<key>NSMotionUsageDescription</key>
 	<string>歩数の計測などに使用します。</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>移動した位置情報に使用します。</string>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>location</string>
+	</array>
 </dict>
 </plist>

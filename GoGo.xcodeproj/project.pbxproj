@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		32D6FF271F78841000385BAE /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32D6FF261F78841000385BAE /* CoreMotion.framework */; };
+		32D6FF291F7B268700385BAE /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32D6FF281F7B268700385BAE /* CoreLocation.framework */; };
+		32D6FF2B1F7B26E600385BAE /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D6FF2A1F7B26E600385BAE /* LocationService.swift */; };
 		32DC44FF1F74ADDE005F4A20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DC44FE1F74ADDE005F4A20 /* AppDelegate.swift */; };
 		32DC45011F74ADDE005F4A20 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DC45001F74ADDE005F4A20 /* FirstViewController.swift */; };
 		32DC45031F74ADDE005F4A20 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DC45021F74ADDE005F4A20 /* SecondViewController.swift */; };
@@ -18,6 +20,8 @@
 
 /* Begin PBXFileReference section */
 		32D6FF261F78841000385BAE /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		32D6FF281F7B268700385BAE /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		32D6FF2A1F7B26E600385BAE /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		32DC44FB1F74ADDE005F4A20 /* GoGo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32DC44FE1F74ADDE005F4A20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		32DC45001F74ADDE005F4A20 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -33,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32D6FF291F7B268700385BAE /* CoreLocation.framework in Frameworks */,
 				32D6FF271F78841000385BAE /* CoreMotion.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -43,6 +48,7 @@
 		32D6FF251F78841000385BAE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				32D6FF281F7B268700385BAE /* CoreLocation.framework */,
 				32D6FF261F78841000385BAE /* CoreMotion.framework */,
 			);
 			name = Frameworks;
@@ -75,6 +81,7 @@
 				32DC45071F74ADDE005F4A20 /* Assets.xcassets */,
 				32DC45091F74ADDE005F4A20 /* LaunchScreen.storyboard */,
 				32DC450C1F74ADDE005F4A20 /* Info.plist */,
+				32D6FF2A1F7B26E600385BAE /* LocationService.swift */,
 			);
 			path = GoGo;
 			sourceTree = "<group>";
@@ -153,6 +160,7 @@
 			files = (
 				32DC45031F74ADDE005F4A20 /* SecondViewController.swift in Sources */,
 				32DC44FF1F74ADDE005F4A20 /* AppDelegate.swift in Sources */,
+				32D6FF2B1F7B26E600385BAE /* LocationService.swift in Sources */,
 				32DC45011F74ADDE005F4A20 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
